@@ -1,1 +1,77 @@
-@use './variables';
+@use './variables' as *;
+@use './mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin roboto-bold {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+@mixin roboto-regular-16 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@mixin roboto-bold-16 {
+    @include roboto-bold();
+    font-size: 1rem;
+}
+
+@mixin roboto-bold-20-30 {
+    @include roboto-bold();
+    font-size: clamp(1.25rem, 3vw, 1.87rem);
+}
+
+@mixin roboto-bold-40-60 {
+    @include roboto-bold();
+    font-size: clamp(2.5rem, 6vw, 3.75rem);
+    line-height: 1.1;
+}
+
+@mixin roboto-bold-40-80 {
+    @include roboto-bold();
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+}
+
+@mixin roboto-bold-40-16 {
+    @include roboto-bold-40-60();
+    color: $main-light;
+    @media screen and (min-width: $screen-lg) {
+        @include roboto-bold-16();
+        @include underline($main-dark);
+        color: $main-dark;
+    }
+}
+
+h1, h2 {
+    @include roboto-bold-40-80();
+    color: $main-dark;
+    .highlight {
+        color: $highlight-orange;
+    }
+}
+
+h3 {
+    @include roboto-bold-20-30();
+}
+
+h4 {
+    @include roboto-bold-16();
+}
+
+p {
+    @include roboto-regular-16();
+}
+
+h4 {
+    @include roboto-bold-40-16()
+}

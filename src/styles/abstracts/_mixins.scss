@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+@mixin d-flex($a, $j) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}
+
+@mixin underline($color) {
+    position: relative;
+    width: fit-content;
+    padding-bottom: 2.5px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2.5px;
+        width: 0;
+        background-color: $color;
+        transition: width .25s ease-out;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
