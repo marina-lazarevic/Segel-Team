@@ -42,9 +42,11 @@ body {
     line-height: 1.1;
 }
 
-@mixin roboto-bold-40-16 {
-    @include roboto-bold-40-60();
+@mixin roboto-bold-32-16 {
+    @include roboto-bold();
+    font-size: 2rem;
     color: $main-light;
+
     @media screen and (min-width: $screen-lg) {
         @include roboto-bold-16();
         @include underline($main-dark);
@@ -70,8 +72,4 @@ h4 {
 
 p {
     @include roboto-regular-16();
-}
-
-h4 {
-    @include roboto-bold-40-16()
 }

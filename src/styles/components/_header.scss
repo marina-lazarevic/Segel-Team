@@ -1,0 +1,30 @@
+@use '../abstracts/index' as *;
+
+.header {
+    @include d-flex(center, space-between);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $main-dark;
+    z-index: 10;
+    @media screen and (min-width: $screen-lg) {
+        background: none;
+    }
+
+    &__branding {
+        @include roboto-bold-20-30;
+        display: block;
+        padding: .8rem $spacing-lg;
+        color: $main-light;
+        background-color: $main-dark;
+        position: relative;
+        &--regular {
+            font-weight: 400;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            padding-left: $spacing-lg * 2.3;
+        }
+    }
+}
