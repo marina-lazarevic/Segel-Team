@@ -10,6 +10,7 @@
     z-index: 10;
     @media screen and (min-width: $screen-lg) {
         background: none;
+        position: absolute;
     }
 
     &__branding {
