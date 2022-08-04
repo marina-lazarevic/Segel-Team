@@ -27,12 +27,12 @@ body {
 
 @mixin roboto-bold-20-30 {
     @include roboto-bold();
-    font-size: clamp(1.25rem, 3vw, 1.87rem);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 @mixin roboto-bold-40-60 {
     @include roboto-bold();
-    font-size: clamp(2.5rem, 6vw, 3.75rem);
+    font-size: clamp(2.5rem, 6vw, 3rem);
     line-height: 1.1;
 }
 

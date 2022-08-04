@@ -10,7 +10,7 @@ json.forEach(event => {
     `<div class="event event--lg">
         <p class="event__date">${date}</p>
         <a href="#" class="event__title">${title}</a>
-        <p class="event__summary">${article[0].slice(0, 80)}</p>
+        <p class="event__summary">${article[0].slice(0, 76)}...</p>
     </div>` :
     events.innerHTML += 
     `<div class="event event--sm">
@@ -21,6 +21,6 @@ json.forEach(event => {
             <h4 class="date-wrapper__date">${date}</date>
         </div>
         <a href="#" class="event__title">${title}</a>
-        <p class="event__summary">${article[0].slice(0, 80)}</p>
+        <p class="event__summary">${article[0].slice(0, 76)}...</p>
     </div>`
 })

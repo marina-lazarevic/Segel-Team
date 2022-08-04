@@ -3,17 +3,53 @@
 .events {
     @include d-flex(center, center);
     flex-wrap: wrap-reverse;
+    @media screen and (min-width: $screen-md) {
+        margin-top: -10vh;
+    }
 }
 
 .event {
     @include d-flex(flex-start, flex-end);
     flex-direction: column;
     padding: 2rem $spacing-lg;
-    min-height: 370px;
     color: $main-dark;
+    width: 100%;
+    @media screen and (min-width: $screen-xl) {
+        min-height: 470px!important;
+        padding: 2rem $spacing-sm;
+    }
 
     &:nth-of-type(odd){
         background-color: $light-gray;
+    }
+
+    &--sm {
+        min-height: 270px;
+        @media screen and (min-width: $screen-md) {
+            width: 50%;
+        }
+        @media screen and (min-width: $screen-xl) {
+            width: 25%;
+        }
+    }
+
+    &--lg {
+        background: $light-gray url('../assets/map.png') no-repeat top right;
+        background-size: auto 100%;
+        min-height: 370px;
+        @media screen and (min-width: $screen-xl) {
+            width: 50%;
+        }
+    }
+
+    &--lg > &__summary {
+        @media screen and (min-width: $screen-md) {
+            width: 50%;
+            padding-right: $spacing-lg;
+            @media screen and (min-width: $screen-xl) {
+                padding-right: 0;
+            }
+        }
     }
 
     &__title {
@@ -21,6 +57,10 @@
         @include underline($main-dark);
         color: $main-dark;
         margin: .7em 0 .5em;
+    }
+
+    &__summary {
+        max-width: 330px
     }
 
     &__date {
