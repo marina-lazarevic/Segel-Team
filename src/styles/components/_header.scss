@@ -25,7 +25,7 @@
         }
 
         @media screen and (min-width: $screen-lg) {
-            padding-left: $spacing-lg * 2.3;
+            padding: .8rem $spacing-sm .8rem $spacing-sm * 2.3;
         }
     }
 }

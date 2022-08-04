@@ -34,7 +34,7 @@
         color: $main-dark;
         @media screen and (min-width: $screen-md) {
             position: absolute;
-            right: $spacing-lg;
+            right: $spacing-sm;
             top: 50%;
             transform: translateY(-50%);
             padding: 0;
