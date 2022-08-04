@@ -1,0 +1,17 @@
+@use '../abstracts/index' as *;
+
+.date-wrapper {
+    @include d-flex(flex-end, flex-start);
+
+    &__icon {
+        height: 1rem;
+        width: auto;
+        path {
+            fill: $main-dark
+        }
+    }
+    &__date {
+        color: $main-dark;
+        margin: 0 0 -3px .5rem;
+    }
+}

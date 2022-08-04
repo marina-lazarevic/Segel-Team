@@ -1,0 +1,29 @@
+@use '../abstracts/index' as *;
+
+.events {
+    @include d-flex(center, center);
+    flex-wrap: wrap-reverse;
+}
+
+.event {
+    @include d-flex(flex-start, flex-end);
+    flex-direction: column;
+    padding: 2rem $spacing-lg;
+    min-height: 370px;
+    color: $main-dark;
+
+    &:nth-of-type(odd){
+        background-color: $light-gray;
+    }
+
+    &__title {
+        @include roboto-bold-20-30;
+        @include underline($main-dark);
+        color: $main-dark;
+        margin: .7em 0 .5em;
+    }
+
+    &__date {
+        @include roboto-bold-40-60;
+    }
+}
