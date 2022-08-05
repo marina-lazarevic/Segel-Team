@@ -1,0 +1,50 @@
+@use '../abstracts/index' as *;
+
+.about {
+    padding: 0 $spacing-lg;
+
+    &__title {
+        margin-bottom: .5em;
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+    }
+
+    .slider {
+        position: relative;
+        margin: 7vh 0;
+
+        &__img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 0 0 auto;
+        }
+
+        &__about-info {
+            margin-top: -8vh;
+            padding: 15vh $spacing-lg 10vh; 
+            background-color: $light-gray;
+        }
+
+        &__role {
+            opacity: .6;
+            margin: .6em 0;
+        }
+
+        &__slide {
+            display: none;
+            &--active {
+                display: block;
+            }
+        }
+
+        &__controls {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+        }
+    }
+}

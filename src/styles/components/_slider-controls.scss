@@ -1,0 +1,23 @@
+@use '../abstracts/index' as *;
+
+.slider {
+    &__controls {
+        @include d-flex(center, center);
+    }
+
+    &__btn {
+        @include d-flex(center, center);
+        background-color: $highlight-orange;
+        height: 70px;
+        width: 70px;
+
+        &[id$='prev']{
+            transform: rotate(180deg);
+        }
+    }
+
+    &__arrow-icon {
+        width: 30px;
+        height: auto;
+    }
+}
