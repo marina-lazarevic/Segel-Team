@@ -2,30 +2,112 @@
 
 .about {
     padding: 0 $spacing-lg;
+    @media screen and (min-width: $screen-xl) {
+        padding: $spacing-sm * 2;
+    }
 
     &__title {
+        margin-bottom: .6em;
+    }
+
+    &__subtitle {
         margin-bottom: .5em;
+        &:last-of-type {
+            margin-top: 2em;
+        }
     }
 
     &__text {
         margin-bottom: 1rem;
     }
 
+    &__compass-img {
+        display: none;
+        @media screen and (min-width: $screen-xl) {
+            display: block;
+            padding-right: $spacing-sm;
+            width: 40%;
+        }
+    }
+
+    &__container:nth-of-type(1) > &__article {
+        @media screen and (min-width: $screen-lg) {
+            width: 50%;
+            margin-bottom: -25%;
+        }
+    }
+
+    &__container:nth-of-type(1) > &__article > &__text {
+        @media screen and (min-width: $screen-lg) {
+            padding-right: $spacing-lg;
+        }
+    }
+
+    &__container:nth-of-type(2) {
+            margin: calc(7vh + 35px) 0 7vh;
+            @media screen and (min-width: $screen-xl) {
+                @include d-flex(center, space-between);
+                margin: 15vh 0;
+            }
+    }
+
+    &__container:nth-of-type(2) > &__article {
+        @media screen and (min-width: $screen-xl) {
+            width: 50%;
+        }   
+    }
+    
+    &__container:nth-of-type(2) > &__article > &__text {
+        @media screen and (min-width: $screen-lg) {
+            max-width: 600px;
+        }
+    }
+
     .slider {
         position: relative;
         margin: 7vh 0;
+        @media screen and (min-width: $screen-lg) {
+            width: 70%;
+            margin-left: auto;
+        }
 
-        &__img {
+        &__slide {
+            display: none;
+            &--active {
+                display: block;
+                @media screen and (min-width: $screen-md) {
+                    @include d-flex(flex-end, flex-end);
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+
+        &__img-container {
             width: 80%;
-            height: auto;
-            display: block;
+            max-height: 100vh;
+            overflow: hidden;
             margin: 0 0 0 auto;
+            @media screen and (min-width: $screen-md) {
+                width: 60%;
+            }
+            @media screen and (min-width: $screen-xl) {
+                width: 65%;
+            }
         }
 
         &__about-info {
             margin-top: -8vh;
             padding: 15vh $spacing-lg 10vh; 
             background-color: $light-gray;
+            @media screen and (min-width: $screen-md) {
+                width: 40%;
+                padding: 7vh $spacing-lg 10vh;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                padding: 10vh $spacing-sm;
+                width: 35%;
+            }
         }
 
         &__role {
@@ -33,18 +115,19 @@
             margin: .6em 0;
         }
 
-        &__slide {
-            display: none;
-            &--active {
-                display: block;
-            }
-        }
-
         &__controls {
             position: absolute;
             left: 50%;
             bottom: 0;
             transform: translate(-50%, 50%);
+            @media screen and (min-width: $screen-md) {
+                transform: none;
+                left: calc(40% - 70px);
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                left: calc(35% - 70px);
+            }
         }
     }
 }

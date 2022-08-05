@@ -59,6 +59,12 @@ h1, h2 {
     color: $main-dark;
     .highlight {
         color: $highlight-orange;
+        @include underline($highlight-orange);
+        &::before {
+            height: 6px;
+            width: 100%;
+            bottom: 6px;
+        }
     }
 }
 
