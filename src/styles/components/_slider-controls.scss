@@ -10,9 +10,14 @@
         background-color: $highlight-orange;
         height: 70px;
         width: 70px;
+        transition: background-color .25s ease-out;
 
         &[id$='prev']{
             transform: rotate(180deg);
+        }
+
+        &:hover {
+            background-color: darken($highlight-orange, 5%);
         }
     }
 

@@ -8,6 +8,7 @@
 
     &__title {
         margin-bottom: .6em;
+        white-space: nowrap;
     }
 
     &__subtitle {
@@ -58,9 +59,7 @@
     }
     
     &__container:nth-of-type(2) > &__article > &__text {
-        @media screen and (min-width: $screen-lg) {
-            max-width: 600px;
-        }
+        max-width: 600px;
     }
 
     .slider {
@@ -101,7 +100,7 @@
             background-color: $light-gray;
             @media screen and (min-width: $screen-md) {
                 width: 40%;
-                padding: 7vh $spacing-lg 10vh;
+                padding: 7vh $spacing-sm 10vh;
             }
 
             @media screen and (min-width: $screen-xl) {
