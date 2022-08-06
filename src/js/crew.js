@@ -75,9 +75,9 @@ function renderCrewMembers(members) {
             <img src="${image}" alt="${name}" class="crew__member-img">
         </div>
             <div class="crew__member-info">
-            <h3 class="crew__member-name">${name}</h3>
-            <h4 class="crew__member-duty">${duties}</h4>
-            <p class="crew__member-bio">Lorem ipsum sit dolor amet</p>
+            <div class="displaced"><h3 class="crew__member-name">${name}</h3></div>
+            <div class="displaced"><h4 class="crew__member-duty">${duties}</h4></div>
+            <div class="displaced"><p class="crew__member-bio">Lorem ipsum sit dolor amet</p></div>
         </div>
         `
 
