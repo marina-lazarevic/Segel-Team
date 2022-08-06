@@ -24,6 +24,7 @@
         @include d-flex(flex-end, center);
         flex-wrap: wrap;
         text-align: center;
+        margin-bottom: 7vh;
         @media screen and (min-width: 44.25rem) {
             justify-content: space-between;
             text-align: left;
