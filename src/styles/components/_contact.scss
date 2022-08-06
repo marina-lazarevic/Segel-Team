@@ -1,0 +1,67 @@
+@use '../abstracts/index' as *;
+
+.contact {
+    @media screen and (min-width: $screen-md) {
+        @include d-flex(center, space-between);
+    }
+
+    .img-container {
+        display: none;
+        @media screen and (min-width: $screen-md) {
+            @include d-flex(center, flex-end);
+            width: 50%;
+            height: 110vh;
+            background: url('../assets/main-crew.webp') no-repeat top right;
+            background-size: cover;
+        }
+    }
+
+    &__info-container {
+        padding: 10vh $spacing-lg;
+        color: $main-dark;
+        @media screen and (min-width: $screen-md) {
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 7vh;
+    }
+
+    &__label {
+        opacity: .6;
+        margin: 2.3rem 0 .3em;
+    }
+
+    &__item {
+        @include roboto-bold-20-30;
+        color: $main-dark;
+        @include underline($main-dark);
+        width: fit-content;
+        text-transform: none;
+    }
+
+    &__item:hover > &__address {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &__address {
+        display: inline-block;
+        margin-bottom: .15em;
+        @include underline($main-dark);
+    }
+
+    &__icon {
+        height: 24px;
+        width: auto;
+        display: inline-block;
+        margin-right: 20px;
+
+        path {
+            fill: $main-dark;
+        }
+    }
+}
