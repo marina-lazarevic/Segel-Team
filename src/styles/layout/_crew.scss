@@ -97,7 +97,7 @@
         width: 100%;
         overflow: hidden;
         filter: grayscale(100%);
-        transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 0.88);
+        transition: 0.3s ease-out;
         &::before {
             content: '';
             position: absolute;
@@ -162,7 +162,7 @@
         z-index: 2;
 
         &::before {
-            transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 0.88);
+            transition: 0.3s ease-out;
             width: 100%;
         }
     }
@@ -170,7 +170,7 @@
     &__member:hover > &__member-info > .displaced > &__member-name,
     &__member:hover > &__member-info > .displaced > &__member-duty,
     &__member:hover > &__member-info > .displaced > &__member-bio {
-        transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 0.88) 0.15s;
+        transition: 0.3s ease-out 0.15s;
         transform: translateY(0);
     }
 

@@ -17,7 +17,7 @@ let filtered = (duty) => {
 
 function getCrewData(p, l, d) {
     let xhr = new XMLHttpRequest;
-    let url = `https://challenge-api.view.agentur-loop.com/api.php?page=${p}&limit=${l}${d !== '' ? '&duty=' + d : ''}`;
+    let url = `https://challenge-api.view.agentur-loop.com/api.php?page=${p}&limit=${l}`;
 
     xhr.open('GET', url, true);
 
@@ -41,8 +41,7 @@ function getCrewData(p, l, d) {
             members.forEach(member => {
                 member.image = images[members.indexOf(member)];
             })
-
-            d !== '' ? renderCrewMembers(filtered(btn.id)) : renderCrewMembers(members);
+            d !== '' ? renderCrewMembers(filtered(d)) : renderCrewMembers(members);
         }
     }
 
@@ -59,7 +58,14 @@ document.querySelectorAll('.crew__filter-btn').forEach(btn => {
         document.querySelector('.crew__filter-btn--active').classList.remove('crew__filter-btn--active');
         btn.classList.add('crew__filter-btn--active');
 
-        btn.id !== 'all' ? renderCrewMembers(filtered(btn.id)) : renderCrewMembers(members);
+        if(btn.id !== 'all'){
+            duty = btn.id
+            renderCrewMembers(filtered(duty))
+            return;
+        } 
+
+        duty = ''; 
+        renderCrewMembers(members);
     })
 })
 
