@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
@@ -60,7 +59,6 @@ module.exports = {
       favicon: "src/assets/favicon.png",
       inject: 'body',
     }),
-    new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       filename: "styles/[name].css",
     }),
