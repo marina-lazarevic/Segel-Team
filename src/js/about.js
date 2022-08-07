@@ -1,4 +1,5 @@
 import json from '../data/founders.json';
+import { sliderControls } from './slider';
 
 const about_slider = document.querySelector('#a-slider');
 
@@ -17,3 +18,6 @@ json.forEach(founder => {
     </div>
     `
 })
+
+sliderControls(about_slider);
+

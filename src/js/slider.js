@@ -1,6 +1,4 @@
-const sliders = document.querySelectorAll('.slider');
-
-sliders.forEach(slider => {
+export function sliderControls(slider) {
     let id = slider.id;
     slider.innerHTML += 
     `<div class="slider__controls">
@@ -31,4 +29,4 @@ sliders.forEach(slider => {
             slides[i].classList.add('slider__slide--active')
         })
     })
-})
+}

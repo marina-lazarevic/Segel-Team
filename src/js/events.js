@@ -1,4 +1,7 @@
 import json from '../data/events.json';
+import { fillModal } from './modal';
+import { m_slider } from './modal';
+import { sliderControls } from './slider';
 
 const events = document.querySelector('#events');
 
@@ -24,3 +27,11 @@ json.forEach(event => {
         <p class="event__summary">${article[0].slice(0, 76)}...</p>
     </div>`
 })
+
+let card = events.querySelectorAll('.event');
+for(let i = 0; i < card.length; i++) {
+    card[i].addEventListener('click', () => {
+        fillModal(json[i])
+        sliderControls(m_slider);
+    })
+}
