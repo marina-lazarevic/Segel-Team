@@ -35,3 +35,12 @@ for(let i = 0; i < card.length; i++) {
         sliderControls(m_slider);
     })
 }
+
+events.querySelectorAll('.event__title').forEach(title => {
+    title.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+})
+
+// fillModal(json[2])
+// sliderControls(m_slider);
